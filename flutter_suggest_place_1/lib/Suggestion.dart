@@ -65,6 +65,25 @@ class SuggestionPlace extends StatelessWidget{
             )
             ),
         ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            '3.รถประจำทาง',
+            style : TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            )
+            ),
+        ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            'มีบริการรถประจำทางจากกรุงเทพฯ และจังหวัดรอบๆ ที่มีเส้นทางผ่านสมุทรปราการ และขึ้นรถประจำสมุทรปราการมายังเมืองโบราณ',
+            style : TextStyle(
+              fontSize: 20.0
+            )
+            ),
+        ),
       ],
     );
   }
