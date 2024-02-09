@@ -10,6 +10,10 @@ class DescriptionPlace extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
+            margin : EdgeInsets.all(10),
+            child: Image.asset('img/P03006201_1.jpg'),
+          ),
+          Container(
             margin: EdgeInsets.all(10),
             child:  Text(
             'History',
