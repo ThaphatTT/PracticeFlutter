@@ -104,6 +104,63 @@ class SuggestionPlace extends StatelessWidget{
             )
             ),
         ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            '1.ที่พัก',
+            style : TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            )
+            ),
+        ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            'มีโรงแรมและที่พักต่างๆ ในเมืองโบราณสมุทรปราการและรอบบริเวณเมืองโบราณที่สามารถเดินทางโดยใช้รถประจำทางได้ และ มีโรงแรมที่มีระดับมาตรฐานและระดับหลายราคา',
+            style : TextStyle(
+              fontSize: 20.0
+            )
+            ),
+        ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            '2.ร้านอาหาร',
+            style : TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            )
+            ),
+        ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            'มีร้านอาหารท้องถิ่นและร้านอาหารสากลที่บริเวณใกล้เคียงและบริเวณในเมืองโบราณ ทำให้คุณสามารถสนุกสนานกับการลิ้มลองอาหารท้องถิ่น',
+            style : TextStyle(
+              fontSize: 20.0
+            )
+            ),
+        ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            '3.สถานที่ท่องเที่ยว',
+            style : TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            )
+            ),
+        ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            'มืองโบราณสมุทรปราการมีมรดกทางประวัติศาสตร์สำคัญ เช่น พระมหาธาตุยานนาค (พระบรมราชวรวิหารทอง), พระราชวังสระบุรี, และพิพิธภัณฑ์โบราณสมุทรปราการ และรอบนอกก็ยังมีสถาที่ท่องเที่ยวอีกมากมาย',
+            style : TextStyle(
+              fontSize: 20.0
+            )
+            ),
+        ),
       ],
     ),
     );
