@@ -5,7 +5,8 @@ class SuggestionPlace extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return Column(
+    return SingleChildScrollView(
+      child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
@@ -84,7 +85,27 @@ class SuggestionPlace extends StatelessWidget{
             )
             ),
         ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            'สิ่งอำนวยความสะดวก',
+            style: TextStyle(
+              fontSize: 40.0,
+              fontWeight: FontWeight.bold,
+            ),
+            ),
+        ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            'โดยบริเวณรอบเมืองโบราณนั้นมี โรงแรม และ ร้านอาหาร พร้อมกับ สถานที่ท่องเที่ยวพร้อมบริการมากมาย',
+            style : TextStyle(
+              fontSize: 20.0
+            )
+            ),
+        ),
       ],
+    ),
     );
   }
 }
