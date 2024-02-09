@@ -46,7 +46,25 @@ class SuggestionPlace extends StatelessWidget{
             )
             ),
         ),
-        
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            '2.รถไฟ',
+            style : TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            )
+            ),
+        ),
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            'ถ้าจะมายังเมืองโบราณสามารถลงได้สถานี BTS ที่อยู่ในจังหวัดสมุทรปราการและสามารถต่อรถประจำทางของจังหวัดมายังเมืองโบราณได้',
+            style : TextStyle(
+              fontSize: 20.0
+            )
+            ),
+        ),
       ],
     );
   }
