@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_suggest_place_1/HomeMain.dart';
 import 'package:flutter_suggest_place_1/DescriptionPlace.dart';
 import 'package:flutter_suggest_place_1/Suggestion.dart';
+import 'package:flutter_suggest_place_1/contact.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget{
             MyHome(),
             DescriptionPlace(),
             SuggestionPlace(),
-            MyHome(),
+            ContactMe(),
           ],
           )
         )
