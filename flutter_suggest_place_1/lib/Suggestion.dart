@@ -10,6 +10,12 @@ class SuggestionPlace extends StatelessWidget{
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
+          margin: EdgeInsets.all(10),
+          child: Image.asset(
+            'img/t-04-Bangkok-to-Samut-Prakan-‘Yellow-Line-faces-slow-start-on-first-day-of-fare-collection.jpg',
+            ),
+        ),
+        Container(
           margin: EdgeInsets.all(5),
           child: Text(
             'การเดินทาง',
