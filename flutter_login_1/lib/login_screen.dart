@@ -14,6 +14,7 @@ class LoginScreenState extends State<LoginScreen>{
   //create variable in side
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  bool _obscurePassword = true;
 
   @override
   Widget build (BuildContext context){
@@ -28,24 +29,24 @@ class LoginScreenState extends State<LoginScreen>{
           child : Column(
             children: [
               // type 1
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Enter your user name'
-                ),
-              ),
-                ),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Enter your password',
-                ),
-              ),
-                ),
+              // Padding(
+              //   padding: EdgeInsets.all(10),
+              //   child: TextField(
+              //   decoration: InputDecoration(
+              //     border: OutlineInputBorder(),
+              //     hintText: 'Enter your user name'
+              //   ),
+              // ),
+              //   ),
+              // Padding(
+              //   padding: EdgeInsets.all(10),
+              //   child: TextField(
+              //   decoration: InputDecoration(
+              //     border: OutlineInputBorder(),
+              //     hintText: 'Enter your password',
+              //   ),
+              // ),
+              //   ),
                 //type form
               Padding(
                 padding: EdgeInsets.all(2),
@@ -73,14 +74,24 @@ class LoginScreenState extends State<LoginScreen>{
                   padding: EdgeInsets.all(5),
                   child: TextFormField(
                     controller : _passwordController,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: 'Password',
                       hintText: 'Enter your password',
-                      border: OutlineInputBorder()
+                      border: OutlineInputBorder(),
+                      suffix: InkWell(
+                        onTap: () {
+                          setState(() {
+                            _obscurePassword = !_obscurePassword;
+                          });
+                        },
+                        child: Icon(
+                          _obscurePassword ? Icons.visibility : Icons.visibility_off
+                        ),
+                      )
                       ),
-                      obscureText: true, // password
+                      obscureText: _obscurePassword, // password
                     keyboardType: TextInputType.visiblePassword,
-                  validator: (value){
+                    validator: (value){
                     if (value == null || value.isEmpty){
                       return 'Please enter some text';
                     }else if(value.length < 6){
