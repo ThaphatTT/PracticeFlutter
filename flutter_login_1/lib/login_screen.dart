@@ -10,18 +10,42 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen>{
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build (BuildContext context){
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
       ),
-      body: TextField(
-        decoration: InputDecoration(
-          border: OutlineInputBorder(),
-          hintText: 'Please Input Your User Name'
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: Form(
+          key: _formKey,
+          child : Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter your user name'
+                ),
+              ),
+                ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter your password'
+                ),
+              ),
+                )
+            ],
+          )
         ),
-      ),
+      )
     );
   }
 }
