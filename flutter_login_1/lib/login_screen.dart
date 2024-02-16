@@ -47,7 +47,9 @@ class LoginScreenState extends State<LoginScreen>{
               Padding(
                 padding: EdgeInsets.all(10),
                 child: Column(children: [
-                  TextFormField(
+                  Container(
+                    padding: EdgeInsets.all(5),
+                    child: TextFormField(
                     decoration: const InputDecoration(
                       labelText: 'Email',
                       hintText: 'Enter your Email',
@@ -61,7 +63,10 @@ class LoginScreenState extends State<LoginScreen>{
                     return null;
                   },
                 ),
-                TextFormField(
+                  ),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  child: TextFormField(
                     decoration: const InputDecoration(
                       labelText: 'Password',
                       hintText: 'Enter your password',
@@ -75,7 +80,9 @@ class LoginScreenState extends State<LoginScreen>{
                     }
                     return null;
                   },
-                ),const SizedBox( // create height size box
+                ),
+                ),
+                const SizedBox( // create height size box
                   height: 20,
                 ),SizedBox(
                   width: double.infinity,
