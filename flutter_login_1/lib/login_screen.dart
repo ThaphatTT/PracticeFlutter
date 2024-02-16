@@ -63,8 +63,9 @@ class LoginScreenState extends State<LoginScreen>{
                   validator: (value){
                     if (value == null || value.isEmpty){
                       return 'Please enter some text';
+                    }else if(!value.contains('@')){ // check character @
+                      return 'Please enter valid email';
                     }
-                    return null;
                   },
                 ),
                   ),
@@ -82,8 +83,9 @@ class LoginScreenState extends State<LoginScreen>{
                   validator: (value){
                     if (value == null || value.isEmpty){
                       return 'Please enter some text';
+                    }else if(value.length < 6){
+                      return 'Please enter character greater than 6';
                     }
-                    return null;
                   },
                 ),
                 ),
