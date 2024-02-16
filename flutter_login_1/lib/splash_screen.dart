@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // new import
 import 'dart:async';
 import 'package:flutter_login_1/login_screen.dart';
+import 'dart:math';
 
 class SplashScreenState extends StatefulWidget {
   const SplashScreenState({super.key});
@@ -22,15 +23,66 @@ class _SplashScreenStateState extends State<SplashScreenState> {
   }
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'Thaphat Meechaitana 6402539', 
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold
-          )), 
+    return Scaffold(
+      body: Column(
+        children: [
+        // Center(
+        // child: const Text(
+        //   'Thaphat Meechaitana 6402539', 
+        //   style: TextStyle(
+        //     fontSize: 24,
+        //     fontWeight: FontWeight.bold
+        //   )),
+        // ),
+        Container(
+          child: Image.asset('assets/img/LOGO-removebg-preview.png'),
         ),
+        Container(
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Dot(index: 0),
+                SizedBox(width: 16),
+                Dot(index: 1),
+                SizedBox(width: 16),
+                Dot(index: 2),
+              ],
+            ),
+      ),
+        ),
+      ],
+      ),
+    );
+  }
+}
+
+class Dot extends StatelessWidget {
+  final int index;
+
+  const Dot({Key? key, required this.index}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder(
+      duration: Duration(seconds: 3),
+      tween: Tween<double>(begin: 0, end: 5 * 3.14),
+      builder: (context, double value, child) {
+        return Transform.translate(
+          offset: Offset(
+            0,
+            sin(value + (index * 0.5)) * 5,
+          ),
+          child: Container(
+            width: 10,
+            height: 50,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(0, 74, 173,1),
+              shape: BoxShape.circle,
+            ),
+          ),
+        );
+      },
     );
   }
 }
