@@ -35,7 +35,7 @@ class _SplashScreenStateState extends State<SplashScreenState> {
         //   )),
         // ),
         Container(
-          child: Image.asset('assets/img/LOGO-removebg-preview.png'),
+          child: Image.asset('assets/img/LOGO-non-font-removebg-preview.png'),
         ),
         Container(
           child: Center(
