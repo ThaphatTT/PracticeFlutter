@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_1/login_screen.dart';
+import 'package:flutter_login_1/home_screen.dart';
 
 class TabBarMenuApp extends StatelessWidget {
   const TabBarMenuApp({super.key});
@@ -21,7 +22,7 @@ class TabBarMenuApp extends StatelessWidget {
       ),
       body: TabBarView(
         children: [
-          Icon(Icons.home),
+          HomeScreen(),
           Icon(Icons.contact_mail),
           LoginScreen()
           ],
