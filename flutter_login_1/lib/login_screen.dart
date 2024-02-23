@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+//new import
+import 'package:flutter_login_1/checkbox.dart';
+
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -85,7 +89,7 @@ class LoginScreenState extends State<LoginScreen>{
                           });
                         },
                         child: Icon(
-                          _obscurePassword ? Icons.visibility : Icons.visibility_off
+                          _obscurePassword ? Icons.visibility_off : Icons.visibility
                         ),
                       )
                       ),
@@ -99,6 +103,23 @@ class LoginScreenState extends State<LoginScreen>{
                     }
                   },
                 ),
+                ),
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text('Hide Password'),
+                      CheckboxExample(
+                        onCheckedChanged: (value) {
+                            if (value != null) {
+                              setState(() {
+                                _obscurePassword = value;
+                              });
+                            }
+                          },
+                      )
+                    ],
+                  ),
                 ),
                 const SizedBox( // create height size box
                   height: 20,
