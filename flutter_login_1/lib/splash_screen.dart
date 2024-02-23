@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_login_1/login_screen.dart';
 import 'dart:math';
+import 'package:flutter_login_1/TabMenu.dart';
 
 class SplashScreenState extends StatefulWidget {
   const SplashScreenState({super.key});
@@ -17,7 +18,7 @@ class _SplashScreenStateState extends State<SplashScreenState> {
     super.initState();
     Timer(const Duration(seconds : 3),(){
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const LoginScreen())
+        MaterialPageRoute(builder: (_) => const TabBarMenuApp())
       );
     });
   }

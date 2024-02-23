@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 //new import
 import 'package:flutter_login_1/checkbox.dart';
 
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
