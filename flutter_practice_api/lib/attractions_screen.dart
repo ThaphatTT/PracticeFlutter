@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 // new import
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+
+import 'package:flutter_practice_api/attraction_detail_screen.dart';
+
 class AttractionsPage extends StatefulWidget {
   const AttractionsPage({super.key});
 
@@ -50,6 +53,14 @@ class _AttractionsPageState extends State<AttractionsPage> {
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
               ),
+               onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            AttractionDetailPage(id: attraction['id'])));
+              },
+
             );
           },
         ));
