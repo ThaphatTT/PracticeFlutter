@@ -40,7 +40,16 @@ class _AttractionsPageState extends State<AttractionsPage> {
           itemBuilder: (context, index) {
             final attraction = _attractions[index];
             return ListTile(
+              leading: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.2,
+                child: Image.network(attraction['coverimage']),
+              ),
               title: Text(attraction['name']),
+              subtitle: Text(
+                attraction['detail'],
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
             );
           },
         ));
