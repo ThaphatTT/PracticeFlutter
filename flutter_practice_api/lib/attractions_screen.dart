@@ -33,7 +33,7 @@ class _AttractionsPageState extends State<AttractionsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Karn 6090059'),
+          title: const Text('Thaphat 6402539'),
         ),
         body: ListView.builder(
           itemCount: _attractions.length,
